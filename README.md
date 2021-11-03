@@ -59,3 +59,31 @@ ViewModel 能够监听到视图的变化，并能够通知数据发生改变
   - watch:function(new,old){}
   - 监听data中数据的变化
   - 两个参数，一个返回新值，一个返回旧值
+
+### Vue 模板闪烁问题解决思路 v-clock
+```html
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+
+    <!-- v-clock:解决闪烁问题 -->
+    <style>
+        [v-clock]{
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+
+<!-- View层 模板 -->
+<div id="app" v-clock>
+    <div>
+        {{info.name}}
+        {{info.links[1].url}}
+    </div>
+</div>
+</body>
+```
