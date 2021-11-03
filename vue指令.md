@@ -128,3 +128,69 @@
 </body>
 </html>
 ```
+- v-model 数据双向绑定
+```html
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+<body>
+
+<!-- View层 模板 -->
+<!-- v-model数据双向绑定 -->
+<!-- 文本数据绑定 -->
+<div id="app">
+    输入的文本: <input type="text" v-model="inputText"> {{inputText}}
+    <textarea v-model="inputText"></textarea>{{inputText}}
+</div>
+
+<!-- 当选框数据绑定 -->
+<div id="app2">
+    性别:
+    <input type="radio" name="sex" value="男" v-model="gender"> 男
+    <input type="radio" name="sex" value="女" v-model="gender"> 女
+    选的是 ： {{gender}}
+</div>
+
+
+<!-- 下拉列表数据绑定 -->
+<div id="app3">
+    选择你的英雄:
+    <select v-model="champion">
+        <option value="">--请选择--</option>
+        <option value="neeko">妮蔻</option>
+        <option value="gnar">纳尔</option>
+        <option value="kindred" selected>千珏</option>
+    </select>
+    你选择了: {{champion}}
+</div>
+
+<!-- 导入Vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data: {
+            inputText: "neeko"
+        }
+    });
+
+    var vm2 = new Vue({
+        el: "#app2",
+        data: {
+            gender: ""
+        }
+    });
+
+    var vm2 = new Vue({
+        el: "#app3",
+        data: {
+            champion: "",
+        }
+    });
+</script>
+</body>
+</html>
+```
