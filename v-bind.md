@@ -1,0 +1,31 @@
+## v-bind数据绑定
+```html
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+<body>
+
+<!-- View层 模板 -->
+<div id="app">
+    <span v-bind:title="message">
+        鼠标悬停几秒后查看此处动态绑定的提示信息
+    </span>
+</div>
+
+<!-- 导入Vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        //Model 数据
+        data:{
+            message:"hello,vue!"
+        }
+    });
+</script>
+</body>
+</html>
+```
