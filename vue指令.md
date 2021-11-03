@@ -194,3 +194,37 @@
 </body>
 </html>
 ```
+### Vue.component Vue组件
+```html
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+<body>
+
+<!-- View层 模板 -->
+<div id="app">
+    <kindred v-for="cham in heroes" v-bind:hero="cham"></kindred>
+</div>
+
+<!-- 导入Vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    //定义一个Vue组件
+    Vue.component("kindred",{
+        props: ['hero'],
+        template: "<li>{{hero}}</li>"
+    });
+
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            heroes: ["永猎双子","迷失之牙","万花通灵"]
+        }
+    });
+</script>
+</body>
+</html> 
+```
