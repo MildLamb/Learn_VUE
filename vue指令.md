@@ -228,3 +228,10 @@
 </body>
 </html> 
 ```
+```bash
+<kindred v-for="cham in heroes" v-bind:hero="cham"></kindred>
+- v-for="cham in heroes":遍历Vue实例中定义的名为heroes的数组，并创建同等数量的组件
+
+- v-bind:hero="cham"：将遍历出来的结过项cham，绑定到组件中props定义的名为hero的属性上
+= 左边为props绑定的属性名 ，= 右边为 绑定遍历出来的每一项的数据项
+```
