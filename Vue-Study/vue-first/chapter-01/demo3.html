@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+<body>
+
+<!-- View层 模板 -->
+<div id="app">
+    <li v-for="(champion,count) in champions">
+        {{champion.name}} -- {{count + 1}}
+    </li>
+</div>
+
+<!-- 导入Vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el:"#app",
+        data: {
+            champions: [
+                {name: "kindred"},
+                {name: "gnar"},
+                {name: "neeko"}
+            ]
+        }
+    });
+</script>
+</body>
+</html>

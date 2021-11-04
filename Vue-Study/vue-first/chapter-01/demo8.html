@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue</title>
+</head>
+<body>
+
+<!-- View层 模板 -->
+<div id="app">
+    <!-- methods和computed的区别
+        methods是方法，每次调用都会运行一次方法得到新的结果
+        computed相当于缓存，当有数据发生变化的时候，计算属性才会重新计算
+     -->
+    <!-- methods中的方法要用方法名()调用 -->
+    <p>currentTime1:{{currentTime1()}}</p>
+    <!-- computed计算属性 可以用方法名直接调用，不用() -->
+    <p>currentTime2:{{currentTime2}}</p>
+    <p>{{message}}</p>
+</div>
+
+<!-- 导入Vue -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    var vm = new Vue({
+        el: "#app",
+        data: {
+            message: "Hello,Kindred"
+        },
+        methods: {
+            currentTime1: function () {
+                return Date.now();  //返回当前时间戳
+            }
+        },
+        computed: {  //计算属性 methods和computed 的方法名不能重名,重名会调用methods中的方法
+            currentTime2: function () {
+                this.message="Hello,World";
+                return Date.now();  //返回当前时间戳
+            }
+        }
+    });
+</script>
+</body>
+</html>
