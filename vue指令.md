@@ -1,4 +1,4 @@
-### v-bind数据绑定
+### v-bind 给组件绑定参数，简写:
 ```html
 <!DOCTYPE html>
 <html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
@@ -95,7 +95,7 @@
 </body>
 </html>
 ```
-### v-on 绑定事件和方法
+### v-on 绑定事件和方法,简写@ 
 ```html
 <!DOCTYPE html>
 <html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
