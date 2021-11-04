@@ -1,1 +1,1 @@
-(()=>{var r={645:(r,t)=>{t.sayHi=function(){document.write("<h1>暴露一个方法</h1>")}}},t={};(function e(o){var i=t[o];if(void 0!==i)return i.exports;var n=t[o]={exports:{}};return r[o](n,n.exports,e),n.exports})(645).sayHi()})();
+(()=>{"use strict";document.write("姓名:kindred<br/>"),document.write("年龄:1500<br/>"),document.write("我是kindred,现在已经1500岁了")})();
