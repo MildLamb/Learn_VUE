@@ -16,6 +16,12 @@
 <div id="app">
     <names>
         <tit slot="tit" v-bind:title="title"></tit>
+        <!--
+            component: this.$emit('re',num);
+            前端: v-on:re="removeItem(count)"
+            通过上面两个操作，实现了组件绑定前端事件，又因为Vue的VM数据双向绑定，此时可以通过前端实现对Vue实例数据的修改
+            组件  ->  前端  ->  Vue实例
+        -->
         <comment slot="comment" v-bind:item="cham" v-for="(cham,count) in chamNames" v-bind:num="count"
                  v-on:re="removeItem(count)"></comment>
     </names>
@@ -46,6 +52,7 @@
         methods: {
             remove: function (num) {
                 //this.$emit(自定义事件名称,方法参数...) 自定义事件分发
+                //自定义事件
                 this.$emit('re',num);
             }
         }
