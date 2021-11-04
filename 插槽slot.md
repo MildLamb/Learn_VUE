@@ -45,6 +45,7 @@
         template: '<li>{{num}} -- {{item}}<button v-on:click="remove">删除</button></li>',
         methods: {
             remove: function (num) {
+                //this.$emit(自定义事件名称,方法参数...) 自定义事件分发
                 this.$emit('re',num);
             }
         }
