@@ -18,3 +18,7 @@ npm install webpack-cli -g
 ```shell
 webpack
 ```
+监听变化
+```shell
+webpack --watch
+```
