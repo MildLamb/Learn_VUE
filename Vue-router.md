@@ -2,7 +2,7 @@
 ```shell
 npm install vue-router --save-dev
 ```
-- 两个模板页面 Main.vue 和 Content.vue
+- 两个模板页面 Main.vue 和 Content.vue  
 Content.vue
 ```html
 <template>
